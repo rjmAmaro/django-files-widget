@@ -83,7 +83,7 @@ class FilePath(unicode):
 
     @property
     def filename(self):
-        return urllib.unquote(re.sub(r'^.+\/', '', self))
+        return urllib.unquote(re.sub(r'^.+\/', '', self)).decode('utf8')
 
     @property
     def display_name(self):
